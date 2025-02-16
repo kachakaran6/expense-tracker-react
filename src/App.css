@@ -1,0 +1,176 @@
+/* Neumorphism Base */
+:root {
+  --light-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1),
+    -6px -6px 10px rgba(255, 255, 255, 0.7); /* Light shadow */
+  --dark-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9); /* Dark shadow */
+}
+
+/* Global Styling */
+body {
+  background-color: #e0e5ec; /* Light greyish background to emphasize the neomorphism effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+.h {
+  margin: 1;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  width: 400px;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #f7f7f7; /* Whiteish background */
+  border: 2px solid #ccc; /* Border around the whole container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Neomorphic Buttons */
+.btn,
+.delete-btn {
+  background-color: #e0e5ec;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1),
+    -6px -6px 10px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+*/ .btn:active,
+.delete-btn:active {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9);
+  transform: translateY(2px);
+}
+
+/* Hover effects for buttons */
+.btn:hover,
+.delete-btn:hover {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+/* List Items with Neomorphic Effect */
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  background: #e0e5ec;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1),
+    -6px -6px 10px rgba(255, 255, 255, 0.7);
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid #ccc; /* Border around each list item */
+}
+
+/* Hover effect on list items */
+.list li:hover {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9);
+  transform: translateY(-5px);
+}
+
+.inc-exp-container {
+  background-color: #f7f7f7;
+  box-shadow: var(--box-shadow);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between; /* Align income and expense on the same line */
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+  padding: 1px; /* Optional padding for inner content */
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede; /* Add a dividing line between income and expense */
+}
+
+/* Income and expense sections */
+.inc-exp-container .income {
+  color: #2ecc71; /* Green color for income */
+}
+
+.inc-exp-container .expense {
+  color: #e74c3c; /* Red color for expense */
+}
+
+/* Money Amount */
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+/* Delete Button (Neomorphic Style) */
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1),
+    -6px -6px 10px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9);
+}
+
+/* Inputs (Neomorphic Style) */
+input[type="text"],
+input[type="number"] {
+  background-color: #e0e5ec;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 90%;
+  font-size: 16px;
+  margin: 10px 0;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15),
+    -6px -6px 15px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: var(--dark-shadow);
+}
